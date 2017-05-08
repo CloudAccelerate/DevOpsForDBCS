@@ -93,6 +93,32 @@ groupID: oracle.com
 
 Your jar should now be installed into the main maven repository
 
+### Step 3 - Load the code
+
+#### Create a new repo
+Load in the repo code
+
+
+```
+Name: DevOpsDBCSApp
+repo: https://github.com/CloudAccelerate/DevOpsForDBCS.git
+```
+
+#### Add maven repo
+
+You'll have to checkout the code from the repo into your editor of choice. Add from the maven tab the remote repository
+
+
+```
+<repositories>
+    <repository>
+        <id>DevOps for DBCS_repo</id>
+        <name>DevOps for DBCS Maven Repository</name>
+        <url>https://developer.em2.oraclecloud.com/profile/developer66451-gse00001984/s/developer66451-gse00001984_devops-for-dbcs_5412/maven/</url>
+    </repository>
+</repositories>
+```
+
 ### Step 3 - Build a SQL Migration Build
 
 Here we will build an automated process using flywaydb to migrate a schema forward using scripts checked into the git source code repo for a specific application.
