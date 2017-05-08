@@ -20,9 +20,10 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.oracle</groupId>
-            <artifactId>ojdbc7</artifactId>
-            <version>0.0.1</version>
+          <groupId>com.oracle</groupId>
+          <artifactId>ojdbc7</artifactId>
+          <version>0.0.1</version>
+          <type>jar</type>
         </dependency>
         <dependency>
             <groupId>org.flywaydb</groupId>

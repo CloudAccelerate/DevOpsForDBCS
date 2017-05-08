@@ -71,30 +71,27 @@ curl -X POST \
 }' https://${REST_ENDPOINT}/paas/service/dbcs/api/v1.1/instances/${DOMAIN}
 ```
 
-### Step 2 - Build a loader for the Oracle DB jar
+### Step 2 - Load Oracle DB jar
 
-#### Build
-name it Jar prep
+#### Got to the maven tab and upload a jar
 
-#### Git Repo
-select master branch
-
-#### Build step
-select maven 3 step
+upload the ojdbc7 jar
 
 
 ```
-target: clean
+artifactId: ojdbc7
+version: 0.0.1
+groupID: oracle.com
+
+<dependency>
+  <groupId>com.oracle</groupId>
+  <artifactId>ojdbc7</artifactId>
+  <version>0.0.1</version>
+  <type>jar</type>
+</dependency>
 ```
 
-Select a second maven step
-
-
-```
-target: install
-```
-
-You jar should now be installed into the main maven repository
+Your jar should now be installed into the main maven repository
 
 ### Step 3 - Build a SQL Migration Build
 
