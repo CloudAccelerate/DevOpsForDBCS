@@ -71,3 +71,72 @@ curl -X POST \
 }' https://${REST_ENDPOINT}/paas/service/dbcs/api/v1.1/instances/${DOMAIN}
 ```
 
+### Step 2 - Build a loader for the Oracle DB jar
+
+#### Build
+name it Jar prep
+
+#### Git Repo
+select master branch
+
+#### Build step
+select maven 3 step
+
+
+```
+target: clean
+```
+
+Select a second maven step
+
+
+```
+target: install
+```
+
+You jar should now be installed into the main maven repository
+
+### Step 3 - Build a SQL Migration Build
+
+Here we will build an automated process using flywaydb to migrate a schema forward using scripts checked into the git source code repo for a specific application.
+
+#### Create a Build
+Name the Build: 
+
+```
+MigrateDB-DemoApp
+```
+#### Build Parameters
+
+
+```
+String Parameter
+  Name: flyway.url
+  Default Value: <jdbc with your IP> ex: jdbc:oracle:thin:@140.86.32.134:1521:ORCL
+
+String Parameter
+  Name: flyway.user
+  Default Value: system
+  
+Password Parameter
+  Name: flyway.password
+  Default Value: Welcome1#
+  
+String Parameters
+  Name: flyway.shemas
+  Default Value: C##DEVOPSDEMO
+```
+
+#### Git Tab
+
+Select the Master branch of the GIT repo
+
+#### Built Step
+
+Add a maven 3 build step
+
+
+```
+target: clean flayway:migrate
+```
+
