@@ -8,6 +8,12 @@ Welcome to the DBCS DevOps Demo Application. This Demo is designed to be used in
 
 ### Step 1: Create a Developer CLoud Service Instance Project
 
+#### Login in to your cloud services dashbaord
+
+#### Open the developer service console
+
+#### Create a new empty project
+
 ### Step 2: Setup a provisioning build
 
 Here we will be defining the build for provisioning new DBCS instances. 
