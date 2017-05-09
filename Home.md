@@ -1,6 +1,6 @@
 ![](https://cloudaccelerate.github.io/TTC-CommonContent/images/ttc-logo.png)
 
-# DevOpsForDBCS
+# DevOps For DBCS
 
 Welcome to the DBCS DevOps Demo Application. This Demo is designed to be used in conjunction with a Developer Cloud Service instance.
 
