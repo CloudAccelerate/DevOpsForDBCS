@@ -79,7 +79,7 @@ curl -X POST \
 }' https://${REST_ENDPOINT}/paas/service/dbcs/api/v1.1/instances/${DOMAIN}
 ```
 
-### Step 2 - Load Oracle DB jar
+### Step 3: Load Oracle DB jar
 
 #### Got to the maven tab and upload a jar
 
@@ -101,7 +101,7 @@ groupID: oracle.com
 
 Your jar should now be installed into the main maven repository
 
-### Step 3 - Load the code
+### Step 4: Load the code
 
 #### Create a new repo
 Load in the repo code
@@ -127,7 +127,7 @@ You'll have to checkout the code from the repo into your editor of choice. Add f
 </repositories>
 ```
 
-### Step 3 - Build a SQL Migration Build
+### Step 5: Build a SQL Migration Build
 
 Here we will build an automated process using flywaydb to migrate a schema forward using scripts checked into the git source code repo for a specific application.
 
