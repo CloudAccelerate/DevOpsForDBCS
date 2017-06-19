@@ -51,7 +51,7 @@ String Paramter
 
 
 #### Build Step
-Add a shell build step and copy int he following script:
+Add a shell build step and copy in the following script:
 
 ```shell
 curl -X POST \
