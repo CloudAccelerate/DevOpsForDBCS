@@ -154,7 +154,7 @@ Password Parameter
   Default Value: Welcome1#
   
 String Parameters
-  Name: flyway.shemas
+  Name: flyway.schemas
   Default Value: C##DEVOPSDEMO
 ```
 
@@ -168,6 +168,6 @@ Add a maven 3 build step
 
 
 ```
-target: clean flayway:migrate
+target: clean flyway:migrate
 ```
 
