@@ -60,7 +60,7 @@ curl -X POST \
 -H "Content-Type:application/json" \
 -d '{
   "description": "DevOps Provisioned",
-  "edition": "EE_HP",
+  "edition": "'${DB_EDITION}'",
   "level": "PAAS",
   "serviceName": "'${DB_NAME}'",
   "shape": "oc3",
@@ -156,6 +156,12 @@ Password Parameter
 String Parameters
   Name: flyway.schemas
   Default Value: C##DEVOPSDEMO
+  
+    
+String Parameters
+  Name: DB_EDITION
+  Default Value: EE
+  Description: DB Edition desired ex: EE, EE_HP, etc
 ```
 
 #### Git Tab
